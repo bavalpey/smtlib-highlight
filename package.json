@@ -1,0 +1,36 @@
+{
+    "name": "smtlib-highlight",
+    "displayName": "smtlib-highlight",
+    "description": "Proper highlighting for smtlib",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.52.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "smtlib",
+            "aliases": ["SMT-LIB", "smtlib"],
+            "extensions": [".smt2"],
+            "configuration": "./language-configuration.json"
+        },
+        {
+            "id": "sygus",
+            "aliases": ["SyGuS", "sygus"],
+            "extensions": [".sy", ".sygus"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "smtlib",
+            "scopeName": "source.smt2",
+            "path": "./syntaxes/smtlib.tmLanguage"
+        },
+        {
+            "language": "sygus",
+            "scopeName": "source.sy",
+            "path": "./syntaxes/sygus.tmLanguage"
+        }]
+    }
+}
